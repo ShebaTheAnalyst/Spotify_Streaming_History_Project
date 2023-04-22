@@ -1,0 +1,38 @@
+Most Frequently Played Songs
+
+SELECT trackName, COUNT(*) as plays
+FROM `spotify_streaming_history.spotify-history`
+GROUP BY trackName
+ORDER BY plays DESC
+
+Top 5 Most Played Songs
+Replay (137 Plays)
+Currents (124 Plays)
+A Keeper (117)
+Texts Go Green (117 Plays)
+Free Mind (116 Plays)
+
+Most Frequently Played Track
+
+SELECT trackName, COUNT(*) as plays
+FROM `spotify_streaming_history.spotify-history`
+GROUP BY trackName
+ORDER BY plays DESC
+LIMIT 1
+
+Replay (Tems) 137 Plays
+
+Most Streamed Artist
+
+SELECT artistName, COUNT(*) as plays
+FROM `spotify_streaming_history.spotify-history`
+WHERE artistName IS NOT NULL
+GROUP BY artistName
+ORDER BY plays DESC
+
+Top 5 Most Streamed Artists
+Drake (979 Streams)
+Tems (878 Streams)
+Flyleaf (633 Streams)
+Mereba (587 Streams)
+Peyton (370 Streams)
